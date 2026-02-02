@@ -1,15 +1,18 @@
 {
-  "name": "localhost-tunnel-client",
-  "version": "0.1.0",
-  "description": "WebSocket-based localhost tunnel client",
+  "name": "localhost-tunnel",
+  "version": "0.2.0",
+  "description": "Simple localhost tunnel - expose your local server to the internet",
   "main": "tunnel-client.js",
   "bin": {
-    "tunnel": "./tunnel-client.js"
+    "tunnel": "./tunnel-client.js",
+    "tunnel-relay": "./tunnel-relay.js"
   },
   "scripts": {
-    "start": "node tunnel-client.js"
+    "start": "node tunnel-client.js",
+    "relay": "node tunnel-relay.js",
+    "dev": "npm run relay"
   },
-  "keywords": ["tunnel", "localhost", "websocket"],
+  "keywords": ["tunnel", "localhost", "websocket", "ngrok", "expose"],
   "author": "Hex",
   "license": "MIT",
   "dependencies": {
